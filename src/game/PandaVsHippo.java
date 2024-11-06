@@ -289,17 +289,13 @@ public class PandaVsHippo extends JPanel implements ActionListener, KeyListener 
             }
         }
     }
-
     // Check screen bounds for Panda
     if (panda.getX() < 0) panda.setX(0);
     if (panda.getX() + 100 > getWidth()) panda.setX(getWidth() - 100);
     
-
     // Check screen bounds for Hippo
     if (hippo.getX() < 0) hippo.setX(0);
     if (hippo.getX() + 100 > getWidth()) hippo.setX(getWidth() - 100);
-    if (hippo.getY() < 0) hippo.setY(0);
-    if (hippo.getY() + 100 > getHeight()) hippo.setY(getHeight() - 100);
     }
  
     private boolean checkCollisionWithPole(int x, int y, int width, int height) {
@@ -312,7 +308,6 @@ public class PandaVsHippo extends JPanel implements ActionListener, KeyListener 
             // Handle key presses for both characters
             panda.handleKeyPressed(e);
             hippo.handleKeyPressed(e);
-
         }
     }
 

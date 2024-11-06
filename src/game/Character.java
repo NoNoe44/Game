@@ -63,16 +63,7 @@ public abstract class Character {
         isMovingLeft = false;
         isMovingRight = false;
     }
-    // Update animation according to movement
-    public void updateWalkCycle() {
-        if (isMovingLeft) {
-            currentWalkLeftIndex = (currentWalkLeftIndex + 1) % walkLeftImages.size();
-            currentImage = walkLeftImages.get(currentWalkLeftIndex);
-        } else if (isMovingRight) {
-            currentWalkRightIndex = (currentWalkRightIndex + 1) % walkRightImages.size();
-            currentImage = walkRightImages.get(currentWalkRightIndex);
-        }
-    }
+    
     // Abstract method to handle key presses
     public abstract void handleKeyReleased(KeyEvent e);
     public abstract void handleKeyPressed(KeyEvent e);
