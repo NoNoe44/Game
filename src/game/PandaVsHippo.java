@@ -203,15 +203,15 @@ public class PandaVsHippo extends JPanel implements ActionListener, KeyListener 
 
     private void drawHealthBar(Graphics g) {
         // Draw the panda's bloodline.
-        g.setColor(Color.GREEN);
+        g.setColor(Color.GRAY);
         g.fillRect(20, 20, 200, 20);
-        g.setColor(Color.RED);
+        g.setColor(Color.GREEN);
         g.fillRect(20, 20, (int) (100 * ((double) panda.getHealth() / 100)), 20);
 
         // วาดแถบเลือดของฮิปโป
-        g.setColor(Color.GREEN);
+        g.setColor(Color.GRAY);
         g.fillRect(getWidth() - 220, 20, 200, 20);
-        g.setColor(Color.RED);
+        g.setColor(Color.GREEN);
         g.fillRect(getWidth() - 220, 20, (int) (100 * ((double) hippo.getHealth() / 100)), 20);
     }
 

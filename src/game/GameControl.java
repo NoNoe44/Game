@@ -6,14 +6,14 @@ import java.awt.event.KeyEvent;
 public class GameControl extends KeyAdapter {
     private Panda panda;
     private Hippo hippo;
-    private boolean gameStarted;   // เก็บสถานะเกม
+    private boolean gameStarted;   // Save game state
 
     public GameControl(Panda panda, Hippo hippo, boolean gameStarted) {
         this.panda = panda;
         this.hippo = hippo;
-         this.gameStarted = gameStarted;  // เก็บค่า gameStarted
+         this.gameStarted = gameStarted;  // Collect gameStarted value
     }
-    // Method เพื่ออัพเดทค่า gameStarted
+    // Method to update gameStarted value.
     public void setGameStarted(boolean gameStarted) {
         this.gameStarted = gameStarted;
     }
@@ -21,19 +21,19 @@ public class GameControl extends KeyAdapter {
     public void keyPressed(KeyEvent e) {
     if (gameStarted) {
         // Handle key presses for both characters
-        if (e.getKeyCode() == KeyEvent.VK_A) {  // กด 'A' เพื่อเดินซ้าย
+        if (e.getKeyCode() == KeyEvent.VK_A) { // Press 'A' to move left.
             panda.moveLeft();
-        } else if (e.getKeyCode() == KeyEvent.VK_D) {  // กด 'D' เพื่อเดินขวา
+        } else if (e.getKeyCode() == KeyEvent.VK_D) { // Press 'D' to move right.
             panda.moveRight();
-        } else if (e.getKeyCode() == KeyEvent.VK_W) {  // กด 'W' เพื่อยิง
+        } else if (e.getKeyCode() == KeyEvent.VK_W) {  // Press 'W' to shoot.
             panda.shoot();
         }
         
-        if (e.getKeyCode() == KeyEvent.VK_LEFT) {  // กดลูกศรซ้ายให้ฮิปโปเดินซ้าย
+        if (e.getKeyCode() == KeyEvent.VK_LEFT) {  // Press the left arrow to make the hippo walk left.
             hippo.moveLeft();
-        } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {  // กดลูกศรขวาให้ฮิปโปเดินขวา
+        } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {  // Press the right arrow to make the hippo walk right.
             hippo.moveRight();
-        } else if (e.getKeyCode() == KeyEvent.VK_UP) {  // กดลูกศรขึ้นเพื่อให้ฮิปโปยิง
+        } else if (e.getKeyCode() == KeyEvent.VK_UP) {  // Press the up arrow to make the hippo shoot.
             hippo.shoot();
         }
     }
@@ -43,13 +43,13 @@ public class GameControl extends KeyAdapter {
     public void keyReleased(KeyEvent e) {
         int keyCode = e.getKeyCode();
 
-        // เมื่อปล่อยปุ่ม จะหยุดการเคลื่อนที่
+        // When the button is released, the movement will stop.
         if (keyCode == KeyEvent.VK_A || keyCode == KeyEvent.VK_D) {
-            panda.stopMoving();  // แพนด้าหยุดเดิน
+            panda.stopMoving();  // The panda stopped walking.
         }
 
         if (keyCode == KeyEvent.VK_LEFT || keyCode == KeyEvent.VK_RIGHT) {
-            hippo.stopMoving(); // ฮิปโปหยุดเดิน
+            hippo.stopMoving(); // The hippo stopped walking.
         }
     }
     

@@ -9,6 +9,7 @@ import javax.swing.ImageIcon;
 public class Panda extends Character {
     private ArrayList<Projectile> projectiles = new ArrayList<>();
     private Thread movementThread; 
+    
     public Panda(double x, double y) {
         super(x, y, 200);  //  Set health to 200.
         
@@ -116,7 +117,7 @@ public class Panda extends Character {
         // Draw a bullet
         for (Projectile p : projectiles) {
             if (p.isActive()) {
-                g.drawImage(p.getImage(), (int) p.getX(), (int) p.getY(), 30, 30, null);  // วาดกระสุนเป็นรูปภาพ
+                g.drawImage(p.getImage(), (int) p.getX(), (int) p.getY(), 30, 30, null); // Draw a bullet as a picture.
             }
         }
     }

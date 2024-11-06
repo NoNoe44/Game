@@ -9,6 +9,7 @@ import javax.swing.ImageIcon;
 public class Hippo extends Character {
     private ArrayList<Projectile> projectiles = new ArrayList<>();
     private Thread movementThread;  // Add declaration of movementThread variable
+    
     public Hippo(double x, double y) {
         super(x, y, 200);   //  Set health to 200.
         walkLeftImages = new ArrayList<>();
