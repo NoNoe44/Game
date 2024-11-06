@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>src/game/Character.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>85</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/tenno/Documents/NetBeansProjects/Game/src/game/Panda.java</file>
+            <file>file:/C:/Users/tenno/Documents/NetBeansProjects/Game/src/game/Character.java</file>
+            <file>file:/C:/Users/tenno/Documents/NetBeansProjects/Game/src/game/Projectile.java</file>
+            <file>file:/C:/Users/tenno/Documents/NetBeansProjects/Game/src/game/PandaVsHippo.java</file>
+            <file>file:/C:/Users/tenno/Documents/NetBeansProjects/Game/src/game/Game.java</file>
+            <file>file:/C:/Users/tenno/Documents/NetBeansProjects/Game/src/game/GameControl.java</file>
+            <file>file:/C:/Users/tenno/Documents/NetBeansProjects/Game/src/game/Hippo.java</file>
+            <file>file:/C:/Users/tenno/Documents/NetBeansProjects/Game/src/game/GameWindow.java</file>
+        </group>
+    </open-files>
+</project-private>
