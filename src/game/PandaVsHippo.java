@@ -165,7 +165,6 @@ public class PandaVsHippo extends JPanel implements ActionListener, KeyListener 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
-        drawGameObjects(g);
         drawHealthBar(g);
         
         g.setColor(Color.BLACK);  // Color of the pole
@@ -208,7 +207,7 @@ public class PandaVsHippo extends JPanel implements ActionListener, KeyListener 
         g.setColor(Color.GREEN);
         g.fillRect(20, 20, (int) (100 * ((double) panda.getHealth() / 100)), 20);
 
-        // วาดแถบเลือดของฮิปโป
+        // Draw the hippo's bloodline.
         g.setColor(Color.GRAY);
         g.fillRect(getWidth() - 220, 20, 200, 20);
         g.setColor(Color.GREEN);
@@ -227,13 +226,13 @@ public class PandaVsHippo extends JPanel implements ActionListener, KeyListener 
         }
     }
     private void checkGameOver() {
-    // ถ้าแพนด้าเลือดหมด
+    // If the panda runs out of blood
     if (panda.getHealth() <= 0) {
         String winnerMessage = "Hippo Wins!";  
         JOptionPane.showMessageDialog(this, winnerMessage);
         endGame();     
     }
-    // ถ้าฮิปโปเลือดหมด
+    // If the hippo runs out of blood
     else if (hippo.getHealth() <= 0) {
         String winnerMessage = "Panda Wins!"; 
         JOptionPane.showMessageDialog(this, winnerMessage);
@@ -294,8 +293,7 @@ public class PandaVsHippo extends JPanel implements ActionListener, KeyListener 
     // Check screen bounds for Panda
     if (panda.getX() < 0) panda.setX(0);
     if (panda.getX() + 100 > getWidth()) panda.setX(getWidth() - 100);
-    if (panda.getY() < 0) panda.setY(0);
-    if (panda.getY() + 100 > getHeight()) panda.setY(getHeight() - 100);
+    
 
     // Check screen bounds for Hippo
     if (hippo.getX() < 0) hippo.setX(0);
