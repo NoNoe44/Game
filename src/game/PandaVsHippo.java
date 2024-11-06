@@ -228,14 +228,10 @@ public class PandaVsHippo extends JPanel implements ActionListener, KeyListener 
     private void checkGameOver() {
     // If the panda runs out of blood
     if (panda.getHealth() <= 0) {
-        String winnerMessage = "Hippo Wins!";  
-        JOptionPane.showMessageDialog(this, winnerMessage);
         endGame();     
     }
     // If the hippo runs out of blood
     else if (hippo.getHealth() <= 0) {
-        String winnerMessage = "Panda Wins!"; 
-        JOptionPane.showMessageDialog(this, winnerMessage);
         endGame();
     }
 }
